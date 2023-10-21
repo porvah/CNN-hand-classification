@@ -1,0 +1,6 @@
+path : \Users\ALI\Desktop\HGP\DS
+train : images\train
+val : images\train
+
+names :
+  0 : Hand
