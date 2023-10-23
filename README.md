@@ -20,6 +20,7 @@ The choice of ALEXnet architecture is due to it being a relatively small model, 
 We tweaked some design decisions to best fit our application.
 What really mattered in our design was preprocessing all images to make the model focus on only the important features of the images thus isolating the background and colors.
 This should result a thresholded image that only has the hand with the outlines of the hand clear to make the classification process more efficient and to remove any bias from the training data.
+The threshold_script.py file was made specifically to convert all training data to thresholded images.
 
 ## Part III: Physical Demo
 In this part, we made a simple arduino sketch that would take that predicted output over serial port from the two previous parts and apply pwm to control the speed levels of a dc motor as a demo.
@@ -34,6 +35,10 @@ Each level represents 20% power of the maximum power of the motor.
 5. supervision
 6. numpy
 7. unltralytics
+
+## Datasets
+1. https://www.kaggle.com/datasets/donaldreddyindelu/finger-count-images
+2. https://www.kaggle.com/datasets/koryakinp/fingers
 
 ## Resources
 1. https://www.tensorflow.org/api_docs
