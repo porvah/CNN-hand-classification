@@ -1,7 +1,7 @@
 
 import cv2
 import os
-
+# Applying preprocessing
 def apply_filter(src):
     image = cv2.imread(src, cv2.IMREAD_GRAYSCALE)
     image = cv2.resize(image, (300, 300))
@@ -12,7 +12,7 @@ def apply_filter(src):
 path = 'dataset/finger_count_data/data/test/'
 dist = 'threshold/test/'
 
-
+# Going through all data and threshold it before training
 for i in range(6):
     src = path + str(i) + '/'
     dst = dist + str(i) + '/'
