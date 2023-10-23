@@ -44,6 +44,6 @@ Each level represents 20% power of the maximum power of the motor.
 ## Colaborators
 This section only includes the team members who worked on this Project
 1. Abdullah M. El-Sayed
-2. Mohamed El-Sayed Attia
+2. Mohamed El-Sayed Atallah
 3. Ali Mahmoud Sobhy
 
