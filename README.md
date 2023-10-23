@@ -10,20 +10,20 @@ This has created enough variance for the model to detect hands of people outside
 Each individual in the team took 300 pictures while doing different hand guestures in different positions in the screen.
 We used [Roboflow](https://roboflow.com/) to label our data.
 This helped prepare the data for YOLOv8 to train.
-We used [Google Colab](https://colab.research.google.com/) TPU feature to train our model using GPU.
-This helped alot in the train time.
-The output from this part with get cropped and passed to Part II.
+We used [Google Colab](https://colab.research.google.com/) TPU feature to train our model.
+This helped alot with the training time.
+The output from this part gets cropped and passed to Part II.
 
 ## Part II: CNN classification model
 In this part we did some research and concluded that with a different variance of [ALEXnet](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf) Architecture, it would suit our application best.
-The choice of ALEXnet architecture is due to it being a relatively small model, deep enough but not too deep and can be deployed later on embedded systems easily or any low power systems.
+The choice of ALEXnet architecture is due to it being a relatively small model, deep enough but not too deep and can be deployed later on an embedded systems easily or any other low power systems.
 We tweaked some design decisions to best fit our application.
 What really mattered in our design was preprocessing all images to make the model focus on only the important features of the images thus isolating the background and colors.
 This should result a thresholded image that only has the hand with the outlines of the hand clear to make the classification process more efficient and to remove any bias from the training data.
 
-## Part III: arduino Demo
-In this part, we made a simple arduino sketch that would take that predicted output from the two previous parts and apply pwm to control the speed levels of a dc motor as a demo.
-This can be using for more than just a DC motor but it is only made as an explanation of the uses of this model.
+## Part III: Physical Demo
+In this part, we made a simple arduino sketch that would take that predicted output over serial port from the two previous parts and apply pwm to control the speed levels of a dc motor as a demo.
+This can be used for more than just a DC motor but it is only made as an demonstration of the uses of this model.
 Each level represents 20% power of the maximum power of the motor.
 
 ## Dependencies
