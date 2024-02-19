@@ -21,11 +21,15 @@ We tweaked some design decisions to best fit our application.
 What really mattered in our design was preprocessing all images to make the model focus on only the important features of the images thus isolating the background and colors.
 This should result a thresholded image that only has the hand with the outlines of the hand clear to make the classification process more efficient and to remove any bias from the training data.
 The threshold_script.py file was made specifically to convert all training data to thresholded images.
+![photo_2024-02-19_02-22-59](https://github.com/porvah/CNN-hand-classification/assets/53157919/7c4be5ef-e329-4fb6-a3d5-0f18ca43a5f0)
+
 
 ## Part III: Physical Demo
 In this part, we made a simple arduino sketch that would take that predicted output over serial port from the two previous parts and apply pwm to control the speed levels of a dc motor as a demo.
 This can be used for more than just a DC motor but it is only made as an demonstration of the uses of this model.
 Each level represents 20% power of the maximum power of the motor.
+![photo_2024-02-19_02-22-53](https://github.com/porvah/CNN-hand-classification/assets/53157919/905e0950-6898-4062-94f4-855ef64d1c1b)
+
 
 ## Dependencies
 1. pyserial
